@@ -143,3 +143,48 @@ footer { padding: 1.5rem clamp(1.25rem, 5vw, 5rem); color: var(--muted); font: .
   .home { padding-top: 130px; }
   .page, .contact-page, .feedback-page { padding-top: 115px; }
 }
+
+/* Fix version buttons on small screens */
+.project-card > div {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.version-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+}
+
+.version-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    padding: 8px 12px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+}
+
+@media (max-width: 400px) {
+    .project-card {
+        gap: 10px;
+    }
+
+    .version-links {
+        gap: 6px;
+    }
+
+    .version-links a {
+        font-size: 11px;
+        padding: 7px 9px;
+    }
+}
